@@ -19,7 +19,7 @@ public:
 
     VerticesList DfsPreOrder(int src) const;
     VerticesList DfsPreOrderRec(int src) const;
-    VerticesList DijkastraShortP(int src, int dest) const;
+    VerticesList DijkstraShortP(int src, int dest) const;
 
 private:
     EdgesList _vertices;

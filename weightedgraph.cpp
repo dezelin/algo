@@ -74,7 +74,7 @@ WeightedGraph::VerticesList WeightedGraph::DfsPreOrderRec(int src) const
     return list;
 }
 
-WeightedGraph::VerticesList WeightedGraph::DijkastraShortP(int src, int dest) const
+WeightedGraph::VerticesList WeightedGraph::DijkstraShortP(int src, int dest) const
 {
     std::size_t size = _vertices.size();
     std::vector<double> dist(size, std::numeric_limits<double>::max());

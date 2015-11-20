@@ -37,7 +37,7 @@ int main()
     };
 
     WeightedGraph g({ adj0, adj1, adj2, adj3, adj4, adj5, adj6 });
-    WeightedGraph::VerticesList path = g.DijkastraShortP(0, 4);
+    WeightedGraph::VerticesList path = g.DijkstraShortP(0, 4);
 
     std::cout << "Path : ";
     std::copy(path.begin(), path.end(), std::ostream_iterator<int>(std::cout, " "));
