@@ -6,10 +6,17 @@
 class Graph
 {
 public:
-    Graph();
+    typedef std::vector<int> AdjacencyList;
+    typedef std::vector<AdjacencyList> VerticesList;
+
+public:
+    Graph(int num);
+
+    void Add(int v, const AdjacencyList& adj);
+    const AdjacencyList& Adj(int v) const;
 
 private:
-    std::vector<std::vector<int>> _edges;
+    VerticesList _vertices;
 };
 
 #endif // GRAPH_H
