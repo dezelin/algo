@@ -61,7 +61,8 @@ WeightedGraph::VerticesList WeightedGraph::DfsPreOrderRec(int src) const
     return DfsPreOrderRecHelper(src, color);
 }
 
-WeightedGraph::VerticesList WeightedGraph::DfsPreOrderRecHelper(int src, std::vector<bool> &color) const
+WeightedGraph::VerticesList WeightedGraph::DfsPreOrderRecHelper(int src,
+    std::vector<bool> &color) const
 {
     VerticesList list;
     list.push_back(src);
