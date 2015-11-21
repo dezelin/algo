@@ -4,8 +4,10 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += main.cpp \
-    weightedgraph.cpp
+    weightedgraph.cpp \
+    sort.cpp
 
 HEADERS += \
-    weightedgraph.h
+    weightedgraph.h \
+    sort.h
 

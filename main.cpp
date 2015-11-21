@@ -1,4 +1,5 @@
 
+#include "sort.h"
 #include "weightedgraph.h"
 
 #include <iterator>
@@ -55,5 +56,13 @@ int main()
     std::copy(list.begin(), list.end(), std::ostream_iterator<int>(std::cout, " "));
     std::cout << std::endl;
 
+    std::vector<int> sortList{ 12, 6, 1, 4, 5, 8, 0 };
+    Sort::Quick(sortList);
+
+    std::cout << "Quicksort list: ";
+    std::copy(sortList.begin(), sortList.end(), std::ostream_iterator<int>(std::cout, " "));
+    std::cout << std::endl;
+
     return 0;
 }
+
