@@ -22,6 +22,9 @@ public:
     VerticesList DijkstraShortP(int src, int dest) const;
 
 private:
+    VerticesList DfsPreOrderRecHelper(int src, std::vector<bool>& color) const;
+
+private:
     EdgesList _vertices;
 };
 

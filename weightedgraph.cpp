@@ -54,9 +54,14 @@ WeightedGraph::VerticesList WeightedGraph::DfsPreOrder(int src) const
     return list;
 }
 
-std::vector<bool> color(512);
-
 WeightedGraph::VerticesList WeightedGraph::DfsPreOrderRec(int src) const
+{
+    std::size_t size = _vertices.size();
+    std::vector<bool> color(size);
+    return DfsPreOrderRecHelper(src, color);
+}
+
+WeightedGraph::VerticesList WeightedGraph::DfsPreOrderRecHelper(int src, std::vector<bool> &color) const
 {
     VerticesList list;
     list.push_back(src);
@@ -67,7 +72,7 @@ WeightedGraph::VerticesList WeightedGraph::DfsPreOrderRec(int src) const
             continue;
 
         color[e.first] = true;
-        VerticesList t = DfsPreOrderRec(e.first);
+        VerticesList t = DfsPreOrderRecHelper(e.first, color);
         list.insert(list.end(), t.begin(), t.end());
     }
 
@@ -110,3 +115,4 @@ WeightedGraph::VerticesList WeightedGraph::DijkstraShortP(int src, int dest) con
     std::reverse(shortp.begin(), shortp.end());
     return shortp;
 }
+
