@@ -8,6 +8,7 @@ class Sort
 public:
     Sort();
 
+    static void Selection(std::vector<int>& v);
     static void Insertion(std::vector<int>& v);
     static void Quick(std::vector<int>& v);
 

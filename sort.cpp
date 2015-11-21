@@ -5,6 +5,19 @@ Sort::Sort()
 
 }
 
+void Sort::Selection(std::vector<int> &v)
+{
+    for(int i = 0; i < (int)v.size() - 1; ++i) {
+        int min = i;
+        for(int j = i + 1; j < (int)v.size(); ++j) {
+            if (v[min] > v[j]) min = j;
+        }
+
+        if (min != i)
+            std::swap(v[min], v[i]);
+    }
+}
+
 void Sort::Insertion(std::vector<int> &v)
 {
     for(int i = 1; i < (int)v.size(); ++i) {

@@ -71,6 +71,13 @@ int main()
     std::copy(sortList.begin(), sortList.end(), std::ostream_iterator<int>(std::cout, " "));
     std::cout << std::endl;
 
+    sortList = std::vector<int>(std::begin(randomList), std::end(randomList));
+    Sort::Selection(sortList);
+
+    std::cout << "Selection list: ";
+    std::copy(sortList.begin(), sortList.end(), std::ostream_iterator<int>(std::cout, " "));
+    std::cout << std::endl;
+
     return 0;
 }
 
