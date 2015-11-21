@@ -5,6 +5,17 @@ Sort::Sort()
 
 }
 
+void Sort::Insertion(std::vector<int> &v)
+{
+    for(int i = 1; i < (int)v.size(); ++i) {
+        int j = i;
+        while(j > 0 && v[j - 1] > v[j]) {
+            std::swap(v[j - 1], v[j]);
+            --j;
+        }
+    }
+}
+
 void Sort::Quick(std::vector<int> &v)
 {
     QuickHelper(v, 0, v.size() - 1);

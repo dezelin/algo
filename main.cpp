@@ -56,10 +56,18 @@ int main()
     std::copy(list.begin(), list.end(), std::ostream_iterator<int>(std::cout, " "));
     std::cout << std::endl;
 
-    std::vector<int> sortList{ 12, 6, 1, 4, 5, 8, 0 };
+    int randomList[] = { 12, 6, 1, 4, 5, 8, 0 };
+    std::vector<int> sortList(std::begin(randomList), std::end(randomList));
     Sort::Quick(sortList);
 
     std::cout << "Quicksort list: ";
+    std::copy(sortList.begin(), sortList.end(), std::ostream_iterator<int>(std::cout, " "));
+    std::cout << std::endl;
+
+    sortList = std::vector<int>(std::begin(randomList), std::end(randomList));
+    Sort::Insertion(sortList);
+
+    std::cout << "Insertion list: ";
     std::copy(sortList.begin(), sortList.end(), std::ostream_iterator<int>(std::cout, " "));
     std::cout << std::endl;
 
